@@ -9,6 +9,8 @@ import { FetchApiDataService } from '../fetch-api-data.service';
 // This import is used to display notifications back to the user
 import { MatSnackBar } from '@angular/material/snack-bar';
 
+import { Router } from '@angular/router';
+this.router.navigate(['movies']); // this can't be right? isn't this supposed to be in the movie-card component?
 
 @Component({
   selector: 'app-user-login-form',
