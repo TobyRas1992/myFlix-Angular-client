@@ -11,24 +11,4 @@ import { MovieCardComponent } from './movie-card/movie-card.component'; */
 })
 export class AppComponent {
   title = 'myFlix-Angular-client';
-
-  /* constructor(public dialog: MatDialog) { } //passing angular material dialog
-  // This is the function that will open the dialog when the signup button is clicked  
-  openUserRegistrationDialog(): void {
-    this.dialog.open(UserRegistrationFormComponent, {
-      // Assigning the dialog a width
-      width: '280px'
-    });
-  }
-  openUserLoginDialog(): void {
-    this.dialog.open(UserLoginFormComponent, {
-      width: '280px'
-    });
-  }
-
-  openMoviesDialog(): void {
-    this.dialog.open(MovieCardComponent, {
-      width: '500px'
-    });
-  } */
 }
