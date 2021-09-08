@@ -10,8 +10,8 @@ import { FetchApiDataService } from '../fetch-api-data.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 import { Router } from '@angular/router';
-this.router.navigate(['movies']); // this can't be right? isn't this supposed to be in the movie-card component?
-
+/* this.router.navigate(['movies']); // this can't be right? isn't this supposed to be in the movie-card component?
+ */
 @Component({
   selector: 'app-user-login-form',
   templateUrl: './user-login-form.component.html',
