@@ -21,6 +21,7 @@ export class ProfileViewComponent implements OnInit {
   user: any = {};
   movies: any = {};
   favorites: any = {};
+
   constructor(
     public fetchApiData: FetchApiDataService,
     public snackBar: MatSnackBar,
@@ -54,8 +55,20 @@ export class ProfileViewComponent implements OnInit {
 
   openUpdateViewDialog(): void {
     this.dialog.open(UpdateViewComponent, {
-      width: '280px',
+      width: '400px',
     });
+  }
+
+  deleteProfile(): void {
+    if (confirm('Are you sure? This cannot be undone.')) {
+      this.fetchApiData.deleteUser().subscribe(() => {
+        localStorage.clear();
+        this.router.navigate(['welcome']);
+        this.snackBar.open('Account Deleted', 'OK', {
+          duration: 3000
+        });
+      });
+    }
   }
 
   removeFromFavorites(_id: string, title: string): void {

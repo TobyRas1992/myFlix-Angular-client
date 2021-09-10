@@ -12,4 +12,9 @@ export class UpdateViewComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /* cancel(): void {
+    this.router.navigate(['/profile']).then(() => {
+      window.location.reload();
+    });
+  } */
 }
