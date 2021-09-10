@@ -1,2 +1,25 @@
 <app-navigation-bar></app-navigation-bar>
-<div class="background"></div>
+<div class="background">
+  <mat-card class="profile-card">
+    <mat-card-header>
+      <mat-card-title class="profile-title">
+        Profile Details
+      </mat-card-title>
+    </mat-card-header>
+    <hr>
+    <mat-card-content>
+      Username: {{ user.Username }}
+    </mat-card-content>
+    <mat-card-content>
+      Email: {{ user.Email }}
+    </mat-card-content>
+    <mat-card-content>
+      Birthday: {{ user.Birthday | date : 'MM/dd/yyyy' : 'UTC' }}
+    </mat-card-content>
+    <mat-card-actions>
+      <div class="profile-buttons">
+        <button class="update-button" mat-raised-button (click)="openUpdateViewDialog()">Update Profile</button>
+      </div>
+    </mat-card-actions>
+  </mat-card>
+</div>
