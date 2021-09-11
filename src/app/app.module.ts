@@ -27,6 +27,11 @@ import { ProfileViewComponent } from './profile-view/profile-view.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { UpdateViewComponent } from './update-view/update-view.component';
+import { GenreViewComponent } from './genre-view/genre-view.component';
+import { DirectorViewComponent } from './director-view/director-view.component';
+import { SynopsisViewComponent } from './synopsis-view/synopsis-view.component';
+
+
 
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
@@ -44,7 +49,10 @@ const appRoutes: Routes = [
     WelcomePageComponent,
     ProfileViewComponent,
     NavigationBarComponent,
-    UpdateViewComponent
+    UpdateViewComponent,
+    GenreViewComponent,
+    DirectorViewComponent,
+    SynopsisViewComponent
   ],
   imports: [
     BrowserModule,
@@ -61,6 +69,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     MatIconModule,
     MatToolbarModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

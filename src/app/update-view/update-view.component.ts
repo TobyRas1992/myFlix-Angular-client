@@ -7,6 +7,7 @@ import { FetchApiDataService } from '../fetch-api-data.service';
 import { MatDialogRef } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
+
 @Component({
   selector: 'app-update-view',
   templateUrl: './update-view.component.html',
@@ -20,6 +21,7 @@ export class UpdateViewComponent implements OnInit {
     public fetchApiData: FetchApiDataService,
     public snackBar: MatSnackBar,
     public dialogRef: MatDialogRef<UpdateViewComponent>,
+
   ) { }
 
   ngOnInit(): void {

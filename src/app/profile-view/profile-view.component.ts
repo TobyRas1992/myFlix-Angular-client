@@ -8,6 +8,9 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 
+// Form control
+import { FormControl, Validators } from '@angular/forms';
+
 // Components
 import { UpdateViewComponent } from '../update-view/update-view.component';
 
