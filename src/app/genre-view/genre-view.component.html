@@ -1,1 +1,11 @@
-<p>genre-view works!</p>
+<div class="genre-container">
+  <mat-toolbar>
+    <mat-toolbar-row class="genre-header">
+      <h3 mat-dialog-title class="genre-title">{{data.name}}</h3>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-dialog-content class="genre-content">
+    {{ data.description }}
+  </mat-dialog-content>
+  <button mat-icon-button aria-label="Close button with an X" mat-dialog-close color="primary">Close</button>
+</div>

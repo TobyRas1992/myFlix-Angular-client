@@ -1,1 +1,13 @@
-<p>director-view works!</p>
+<div class="director-container">
+  <mat-toolbar>
+    <mat-toolbar-row class="director-header">
+      <h3 mat-dialog-title class="director-title">{{data.name}}</h3>
+    </mat-toolbar-row>
+
+  </mat-toolbar>
+  <mat-dialog-content class="director-content">
+    {{ data.birth }} - {{ data.death }} <br>
+    {{ data.bio }}
+  </mat-dialog-content>
+  <button mat-icon-button aria-label="Close button with an X" mat-dialog-close color="primary">Close</button>
+</div>

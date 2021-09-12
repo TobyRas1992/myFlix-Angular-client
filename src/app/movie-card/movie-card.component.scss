@@ -4,6 +4,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: #FEF8DD;
 }
 
 .movie-card {
@@ -29,6 +30,11 @@
 
 .favorite-button:hover {
   cursor: pointer;
+}
+
+.favorite-button:active {
+transform: scale(0.92);
+box-shadow: 3px;
 }
 
 .favorite-text {

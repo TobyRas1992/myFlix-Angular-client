@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FetchApiDataService } from '../fetch-api-data.service';
+
+// Angular Material
 import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 import { GenreViewComponent } from '../genre-view/genre-view.component';
 import { DirectorViewComponent } from '../director-view/director-view.component';
@@ -15,7 +18,8 @@ export class MovieCardComponent {
   movies: any[] = [];
   constructor(
     public fetchApiData: FetchApiDataService,
-    public dialog: MatDialog,) { }
+    public dialog: MatDialog,
+    public snackBar: MatSnackBar,) { }
 
   ngOnInit(): void {
     this.getMovies();
@@ -32,21 +36,29 @@ export class MovieCardComponent {
   openGenreDialog(name: string, description: string): void {
     this.dialog.open(GenreViewComponent, {
       data: { name, description },
-      width: '400px',
+      width: '450px',
     });
   }
 
   openDirectorDialog(name: string, bio: string, birth: Date, death: Date): void {
     this.dialog.open(DirectorViewComponent, {
       data: { name, bio, birth, death },
-      width: '400px',
+      width: '450px',
     });
   }
 
   openSynopsisDialog(title: string, description: string): void {
     this.dialog.open(SynopsisViewComponent, {
       data: { title, description },
-      width: '400px',
-    })
+      width: '450px',
+    });
+  }
+
+  addMovieToFavorites(id: string): any {
+    this.fetchApiData.addFavoriteMovie(id).subscribe((response: any) => {
+      this.snackBar.open(
+        'Added to favorites!', "OK", { duration: 2000, }
+      );
+    });
   }
 }

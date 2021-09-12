@@ -1,0 +1,52 @@
+.profile-card {
+  background-color: #FEF8DD;
+}
+.profile-container {
+  background-color: #FEF8DD;
+}
+
+hr {
+  border: 1px solid;
+}
+
+.favorite-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #FFE7C7;
+
+}
+
+.favorite-title {
+  margin-top: 20px;
+}
+.favorite-card {
+  margin: 10px;
+  width: 148px;
+}
+.favorite-card {
+  background-color: #FEF8DD;
+}
+
+.favorite-card-title { /* find a way to improve the look of the title so it fills out the card top better */
+  text-align: justify;
+  font-weight: 900;
+}
+img {
+  width:100%;
+}
+
+.delete-favorite-button {
+  margin-top: 6px;
+  display: flex;
+  flex-direction: row;
+}
+
+.delete-favorite-button:hover {
+  cursor: pointer;
+}
+
+.delete-favorite-text {
+  margin: 1px 0 10px 6px;
+}

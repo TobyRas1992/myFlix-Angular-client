@@ -19,8 +19,9 @@
           Synopsis
         </button>
         <div class="favorite-button">
-          <mat-icon class="favorite-button">favorite_border</mat-icon>
-          <h5 class="favorite-text">Add to Favorites</h5>
+          <mat-icon class="favorite-button" (click)="addMovieToFavorites(movie._id)"
+            aria-label="Adds movie to user's list of favorites">favorite
+          </mat-icon>
         </div>
       </mat-card-actions>
     </mat-card>
