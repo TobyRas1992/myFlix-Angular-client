@@ -1,0 +1,26 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Update Account Details</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form>
+      <!-- now, I just need to figure out form validation -->
+      <mat-form-field>
+        <input [(ngModel)]="userData.Username" type="text" placeholder="Username" name='Username' required>
+      </mat-form-field>
+      <mat-form-field>
+        <input [(ngModel)]="userData.Password" type="text" placeholder="Password" name="Password" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input [(ngModel)]="userData.Email" type="text" placeholder="Email" name="Password" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input [(ngModel)]="userData.Birthday" type="date" placeholder="Birthday" name="Birthday" required>
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="updateUserInfo()">Update user info</button>
+    <button mat-raised-button color="warn" (click)="cancel()">Cancel</button>
+  </mat-card-actions>
+</mat-card>
