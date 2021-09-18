@@ -17,7 +17,9 @@ export class NavigationBarComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  /**
+   * Method that logs out user.
+   */
   logoutUser(): void {
     localStorage.clear();
     this.router.navigate(['welcome']);

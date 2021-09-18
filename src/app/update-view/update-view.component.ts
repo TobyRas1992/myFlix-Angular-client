@@ -26,7 +26,10 @@ export class UpdateViewComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  /**
+   * @method updateUserInfo()
+   * Updates user info with data from user form. 
+   */
   updateUserInfo(): void {
     this.fetchApiData.editUser(this.userData).subscribe((response) => {
       this.dialogRef.close();
@@ -43,7 +46,10 @@ export class UpdateViewComponent implements OnInit {
       window.location.reload();
     }, 1250);
   }
-
+  /**
+   * @method cancel()
+   * Closes dialog.
+   */
   cancel(): void {
     this.dialogRef.close();
   }

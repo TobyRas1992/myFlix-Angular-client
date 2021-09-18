@@ -8,7 +8,10 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrls: ['./genre-view.component.scss']
 })
 export class GenreViewComponent implements OnInit {
-
+  /**
+   * Injects data from movie-card component.
+   * @param data 
+   */
   constructor(
     @Inject(MAT_DIALOG_DATA)
     public data: {
